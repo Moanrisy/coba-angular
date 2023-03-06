@@ -5,6 +5,7 @@ import { ComponentBComponent } from './component-b/component-b.component';
 import { RouterModule } from '@angular/router';
 import { ChildAComponent } from './component-a/child-a/child-a.component';
 import { ChildBComponent } from './component-a/child-b/child-b.component';
+import { SampleRoutingModule } from './sample-route-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ChildBComponent } from './component-a/child-b/child-b.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    SampleRoutingModule,
   ],
   exports: [
     ComponentAComponent,

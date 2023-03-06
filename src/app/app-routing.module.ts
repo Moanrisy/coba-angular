@@ -9,31 +9,8 @@ import { NotFoundComponent } from "./shared/components/not-found/not-found.compo
 
 const routes: Routes = [
   {
-    path: 'component-a',
-    component: ComponentAComponent,
-    children: [
-      {
-        path: 'child-a',
-        component: ChildAComponent
-      },
-      {
-        path: 'child-b',
-        component: ChildBComponent
-      },
-      {
-        path: 'child-b/:id',
-        component: ChildBComponent
-      }
-    ]
-  },
-  {
-    path: 'component-b',
-    component: ComponentBComponent
-  },
-  {
     path: '',
-    redirectTo: 'component-a',
-    pathMatch: 'full'
+    loadChildren: () => import('./sample-route/sample-route.module').then((m) => m.SampleRouteModule)
   },
   {
     path: '**',
